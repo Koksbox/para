@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Калькулятор</h1>
+    <p>Лаб. работа по DOM</p>
+
+    <div class="calc">
+      <div class="inputs">
+        <label>
+          Первое число
+          <input id="numA" type="text" placeholder="12.5">
+        </label>
+        <br>
+        <label>
+          Второе число
+          <input id="numB" type="text" placeholder="3">
+        </label>
+      </div>
+
+      <div id="ops" class="ops">
+        <button type="button" class="op-btn" data-op="+">+</button>
+        <button type="button" class="op-btn" data-op="-">−</button>
+        <button type="button" class="op-btn" data-op="*">×</button>
+        <button type="button" class="op-btn" data-op="/">÷</button>
+        <button type="button" class="op-btn" data-op="^">^</button>
+      </div>
+
+      <p id="error" class="error" hidden></p>
+
+      <div class="result-box">
+        <p>Результат:</p>
+        <p id="expression">—</p>
+        <p id="result" class="result">0</p>
+      </div>
+
+      <button type="button" id="clearBtn">Очистить</button>
+    </div>
+
+    <div class="history-box">
+      <h2>История</h2>
+      <button type="button" id="clearHistoryBtn">Сбросить историю</button>
+      <ul id="history"></ul>
+    </div>
+  </div>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
